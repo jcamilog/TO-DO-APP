@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'crud',
     canActivate: [CrudGuard],
     loadChildren: () => import ('./crud/crud.module').then(m => m.CrudModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import ('./auth/auth.module').then(m => m.AuthModule)
   }
 ];
 
