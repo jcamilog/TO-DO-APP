@@ -1,0 +1,43 @@
+.container{
+    padding: 80px;
+}
+mat-card-title{
+    margin: 50px;
+    text-align: center;
+}
+mat-form-field{
+    margin: 20px;
+}
+mat-card{
+    // padding-left: 300px;
+    // padding-top: 150px;
+    // padding-bottom: 150px;
+}
+.input__flex{
+    display: flex;
+    justify-content: center;
+}
+.btn__login{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.btn__login button{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.btn__register{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.container__flex{
+    width: 100%;
+    mat-form-field{
+        width: 100%;
+    }
+}
+
+button{
+    outline: none;
+}

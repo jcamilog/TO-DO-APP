@@ -1,0 +1,67 @@
+  <div class="container">
+    <div class="row">
+      <div class="col 12 btn__logout">
+        <button mat-raised-button color="primary" (click)="logout()">Cerrar sesión</button>
+      </div>
+    </div>
+    <div class="row container__add">
+      <div class="col-12 col-lg-6">
+        <div *ngFor="let task of tasks" class="alert alert-success list__item" role="alert">
+          {{task.name}}
+          <div>
+            <button class="mr-1" mat-raised-button color="primary" (click)="delate(task)">
+              <mat-icon>clear</mat-icon>
+            </button>
+            <button  mat-raised-button color="primary" (click)="edit(task)" data-toggle="modal" data-target="#exampleModal">
+              <mat-icon>create</mat-icon>
+            </button>
+          </div>  
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="row">
+          <div class="col-6">
+            <form  class="container__form" [formGroup]="form" (ngSubmit)="addItem($event)">
+              <mat-form-field class="form__aling">
+                <mat-label>Message</mat-label>
+                <textarea matInput type="text" placeholder="write homework" name="name"
+                  [(ngModel)]="task.name" #message maxlength="50" formControlName="text"></textarea>
+                  <mat-hint align="start"><strong>To add a task at least 10 characters</strong> </mat-hint>
+                  <mat-hint align="end">{{message.value.length}} / 50</mat-hint>
+              </mat-form-field>
+              <div class="btn__add--container">
+                <button class="btn__add" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Agregar tarea <mat-icon>control_point</mat-icon> </button>
+              </div>
+            </form>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf="editTask">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel"> Nombre de la tarea a Editar: <br> {{editTask.name}}</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-body2">
+          <mat-form-field>
+            <input matInput type="text" placeholder="Ingresa el name" name="name"
+            [(ngModel)]="editTask.name">
+          </mat-form-field>
+          <button mat-raised-button color="primary" data-dismiss="modal" type="button" (click)="addItemEdit($event)">Guardar edicion</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" mat-raised-button color="primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

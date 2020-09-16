@@ -1,0 +1,45 @@
+button{
+    outline: none;
+}
+.container{
+    padding: 50px;
+}
+
+.btn__logout{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.list__item{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.container__add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__form{
+    width: 100%;
+    mat-form-field{
+        width: 100%;
+    }
+}
+.form__aling{
+    display: flex;
+    justify-content: center;
+}
+.btn__add--container{
+    display: flex;
+    justify-content: center;
+}
+.btn__add{
+    margin-top: 20px;
+}
+.modal-body2{
+    display: flex;
+    justify-content: space-between;
+}
+
