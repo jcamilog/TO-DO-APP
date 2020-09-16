@@ -35,3 +35,25 @@ button{
     padding-left: 50px;
     padding-right: 50px;
 }
+
+// media 
+@media screen and (max-width:1024px){
+}
+    
+@media screen and (max-width:767px){
+    .container{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .container{
+        padding: 5px;
+    }
+}
+    
+@media screen and (max-width:320px){
+    .container{
+        padding: 0px;
+    }
+}

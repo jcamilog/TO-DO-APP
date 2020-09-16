@@ -8,11 +8,6 @@ mat-card-title{
 mat-form-field{
     margin: 20px;
 }
-mat-card{
-    // padding-left: 300px;
-    // padding-top: 150px;
-    // padding-bottom: 150px;
-}
 .input__flex{
     display: flex;
     justify-content: center;
@@ -40,4 +35,26 @@ mat-card{
 
 button{
     outline: none;
+}
+//media
+
+@media screen and (max-width:1024px){
+}
+    
+@media screen and (max-width:767px){
+    .container{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .container{
+        padding: 5px;
+    }
+}
+    
+@media screen and (max-width:320px){
+    .container{
+        padding: 5px;
+    }
 }

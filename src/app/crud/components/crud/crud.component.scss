@@ -43,3 +43,38 @@ button{
     justify-content: space-between;
 }
 
+//media
+@media screen and (max-width:768px){
+    .eje{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:767px){
+    .eje{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:480px){
+    .eje{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
+    
+@media screen and (max-width:320px){
+    .eje{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .btn__add{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

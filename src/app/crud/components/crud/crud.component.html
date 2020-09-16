@@ -12,14 +12,14 @@
             <button class="mr-1" mat-raised-button color="primary" (click)="delate(task)">
               <mat-icon>clear</mat-icon>
             </button>
-            <button  mat-raised-button color="primary" (click)="edit(task)" data-toggle="modal" data-target="#exampleModal">
+            <button  class="mt-1" mat-raised-button color="primary" (click)="edit(task)" data-toggle="modal" data-target="#exampleModal">
               <mat-icon>create</mat-icon>
             </button>
           </div>  
         </div>
       </div>
       <div class="col-12 col-lg-6">
-        <div class="row">
+        <div class="row eje">
           <div class="col-6">
             <form  class="container__form" [formGroup]="form" (ngSubmit)="addItem($event)">
               <mat-form-field class="form__aling">
@@ -30,7 +30,7 @@
                   <mat-hint align="end">{{message.value.length}} / 50</mat-hint>
               </mat-form-field>
               <div class="btn__add--container">
-                <button class="btn__add" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Agregar tarea <mat-icon>control_point</mat-icon> </button>
+                <button class="btn__add" mat-raised-button type="submit" [disabled]="form.invalid">Add Task <mat-icon>control_point</mat-icon> </button>
               </div>
             </form>
           </div>  
